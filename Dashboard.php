@@ -70,7 +70,13 @@
       </div>
       <div class="row">
           <div class="col-xs-6 col-sm-3">
-            <img src="..." alt="..." class="img-rounded">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div>
+                    <p>Insert Map Here</p>
+                  </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
@@ -83,7 +89,13 @@
       <br></br>
       <div class="row">
           <div class="col-xs-6 col-sm-3">
-            <img src="..." alt="..." class="img-rounded">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div>
+                    <p>Insert Map Here</p>
+                  </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
@@ -96,7 +108,13 @@
       <br></br>
       <div class="row">
           <div class="col-xs-6 col-sm-3">
-            <img src="..." alt="..." class="img-rounded">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div>
+                    <p>Insert Map Here</p>
+                  </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
