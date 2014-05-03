@@ -101,7 +101,8 @@
     </div>
 
     <div class="Flexible-container">
-      <div id="map-canvas"/>
+      <div id="col-md-6">
+        <div id="map-canvas"/></div>
       </div>
     </div>
     <div class="row">
