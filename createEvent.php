@@ -140,7 +140,12 @@
     </div>
     <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
     <div class="collapse" id="demo2">
-      <a href="" class="list-group-item">Insert Description Here.</a>
+        <div class="form-group">
+            <div class="list-group-item">
+             <!--</1><label for="name">Insert Description Here                 </label>!-->
+                 <input type="text" class="form-control" id="name" 
+         placeholder="Insert Description Here">
+            </div>
     </div>
    </div>
   </div>
