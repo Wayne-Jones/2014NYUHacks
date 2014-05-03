@@ -9,11 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-        <link rel="stylesheet" href="/resources/demos/style.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
       <script src="js/bootstrap.min.js" type="text/javascript"></script>
       <script>
           // Load this when the DOM is ready
@@ -25,11 +21,6 @@
         });
 
 </script>
-      <script>
-  $(document).ready(function(){
-    $( "#datepicker" ).datepicker();
-  });
-  </script>
     <!--<link href="css/carousel.css" rel="stylesheet">-->
   </head>
   <body>
@@ -135,8 +126,7 @@
   <div class="list-group panel">
     <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date and Time</a>
     <div class="collapse" id="demo1">
-        <div class="list-group-item">
-            <p>Date: <input type="text" id="datepicker">            </p></div>
+        <a href="" class="list-group-item">Insert Date and Time Here.</a>
     </div>
     <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
     <div class="collapse" id="demo2">
