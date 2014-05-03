@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
       <script src="js/bootstrap.min.js" type="text/javascript"></script>
       <script>
@@ -34,13 +35,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">NYU Square</a>
+          <a style="padding: 0px; margin: 0px;" class="navbar-brand" href="#"><img src="images/logo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
+              <li><a href ="#">Hello, Bob</a></li>
+              <li><a href="#">Dashboard</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -97,6 +99,62 @@
   </a>  
 </div>
 <!-- /.carousel -->
+    
+    
+<div class="container" id="a-content">
+    <div class="row target" id="a-row">
+        <div class="col-md-6 col-sm-5" id="a-left">
+
+<!-- SideBar/GuestList -->
+<div class="container" id="a-content">
+    <div class="row target" id="a-row">
+        <div class="col-md-6 col-sm-5" id="a-left">
+            <div id="MainMenu">
+  <div class="list-group panel">
+    <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Guest List</a>
+    <div class="collapse" id="demo3">
+        <a href="" class="list-group-item"> Insert List of People Here.</a>
+    </div>
+        </div>
+        </div>
+            </div>
+<!-- /Sidebar/GuestList -->
+
+<!-- Date/Time/Description -->
+<div class="col-md-6 col-sm-7" id="a-right">
+<div id="MainMenu">
+  <div class="list-group panel">
+    <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date and Time</a>
+    <div class="collapse" id="demo1">
+        <a href="" class="list-group-item">Insert Date and Time Here.</a>
+    </div>
+    <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
+    <div class="collapse" id="demo2">
+      <a href="" class="list-group-item">Insert Description Here.</a>
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+   </div>
+    </div>
+<!-- /Date/Time/Description -->
+
+    
+    <!-- Accept/Decline -->
+    <div class="row">
+    <div class="span4" style="text-align:center">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+     <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Accept </button>
+    <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Decline </button>
+    <div class="col-md-4"></div>
+        </div>
+</div>
+<!-- /Accept/Decline -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
