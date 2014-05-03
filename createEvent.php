@@ -10,11 +10,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-        <link rel="stylesheet" href="/resources/demos/style.css">
+        
+        
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+       <script src="js/jquery-2.1.1.min.js"></script> 
+      <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
       <script src="js/bootstrap.min.js" type="text/javascript"></script>
+      
+        
       <script>
           // Load this when the DOM is ready
           $(document).ready(function(){
@@ -27,7 +30,7 @@
 </script>
       <script>
   $(document).ready(function(){
-    $( "#datepicker" ).datepicker();
+    $( '#datepicker' ).datepicker();
   });
   </script>
     <!--<link href="css/carousel.css" rel="stylesheet">-->
