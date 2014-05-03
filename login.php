@@ -6,13 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NYU Square</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap / CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- JavaScript Files -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
   </head>
-
   <body>
-
     <div class="container">
     <form class="form-horizontal" role="form">
       <div class="form-group">

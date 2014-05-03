@@ -21,7 +21,7 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Load the Google Maps API  -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
