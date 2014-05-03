@@ -7,6 +7,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +40,7 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      <br></br><br></br>
+      <br></br>
       <div class="row">
         <div class="col-md-6">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -60,15 +61,51 @@
           <a class="navbar-brand2" href="#" >Invites</a>
         </div>
       </div>
-      <br></br>
-        <div id="tfheader">
+      <div id="tfheader">
             <form style="text-align:center" id="tfnewsearch" method="get" action="http://www.google.com">
                 <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
                 <input type="submit" value="search" class="tfbutton">
             </form>
             <div class="tfclear"></div>
-            
-        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-6 col-sm-3">
+            <img src="..." alt="..." class="img-rounded">
+          </div>
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+          <!-- Add the extra clearfix for only the required viewport -->
+          <div class="clearfix visible-xs"></div>
+
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      </div>
+      <br></br>
+      <div class="row">
+          <div class="col-xs-6 col-sm-3">
+            <img src="..." alt="..." class="img-rounded">
+          </div>
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+          <!-- Add the extra clearfix for only the required viewport -->
+          <div class="clearfix visible-xs"></div>
+
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      </div>
+      <br></br>
+      <div class="row">
+          <div class="col-xs-6 col-sm-3">
+            <img src="..." alt="..." class="img-rounded">
+          </div>
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+          <!-- Add the extra clearfix for only the required viewport -->
+          <div class="clearfix visible-xs"></div>
+
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      </div>
     </div>
   </body>
 </html>
