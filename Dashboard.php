@@ -41,8 +41,24 @@
       </nav>
       <br></br><br></br>
       <div class="row">
-        <div class="col-md-6">Create Events</div>
-        <div class="col-md-6" align = "right">Invites</div>
+        <div class="col-md-6">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Create Events</a>
+        </div>
+        <div class="col-md-6" align = "right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand2" href="#" >Invites</a>
+        </div>
       </div>
       <br></br>
         <div id="tfheader">
