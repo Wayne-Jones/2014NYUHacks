@@ -3,9 +3,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>NYU Square</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap / CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -15,7 +15,15 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="SearchBar.css" rel="stylesheet">
+    
+    <!-- JavaScript Files -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+
+    <!-- Load the Google Maps API  -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   </head>
   <body>
     <div id= "pageWrap">
