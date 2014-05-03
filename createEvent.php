@@ -41,7 +41,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-              <li><a href ="#">Hello, Bob</a></li>
+              <p class="navbar-text">Hello, Bob</p>
               <li><a href="#">Dashboard</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -153,8 +153,17 @@
     <div class="col-md-4"></div>
         </div>
 </div>
+</div>
 <!-- /Accept/Decline -->
 
+<!-- Map of Event -->
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div>
+        <p>Insert Map Here</p>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
