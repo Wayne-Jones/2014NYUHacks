@@ -100,6 +100,11 @@
       </div><!-- /.container-fluid -->
     </div>
 
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+
     <div class="row">
       <div class="col-xs-6 col-md-6">
         <div id="map-canvas"/></div>
