@@ -72,7 +72,7 @@
           <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Picture description?</h1>
+          <h1>Event Title</h1>
           <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""><p></p>
           <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Add a Picture!</a>
         </p></pthis></div>
@@ -82,7 +82,7 @@
       <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Picture Description?</h1>
+          <h1>Event Title</h1>
           <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Add a Picture!</a>
         </p>
         </div>
@@ -92,7 +92,7 @@
       <img src="http://placehold.it/1500X500" class="img-responsive">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Picture Description?</h1>
+          <h1>Event Title</h1>
           <p><p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Add a Picture!</a>
         </p></p>
         </div>
@@ -136,7 +136,9 @@
     <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date and Time</a>
     <div class="collapse" id="demo1">
         <div class="list-group-item">
-            <p>Date: <input type="text" id="datepicker">            </p></div>
+            <p>Date: <input type="text" id="datepicker">            </p>
+            <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Submit</button>
+        </div>
     </div>
     <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
     <div class="collapse" id="demo2">
@@ -144,7 +146,8 @@
             <div class="list-group-item">
              <!--</1><label for="name">Insert Description Here                 </label>!-->
                  <input type="text" class="form-control" id="name" 
-         placeholder="Insert Description Here">
+         placeholder="Description">
+                <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Submit</button>
             </div>
     </div>
    </div>
@@ -174,6 +177,9 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div>
+        <input type="text" class="form-control" id="name" 
+         placeholder="Location">
+        <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Submit</button>
         <p>Insert Map Here</p>
         </div>
       </div>
