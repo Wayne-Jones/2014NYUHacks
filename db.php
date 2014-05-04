@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("107.170.159.107", "root", "", "NYUSquare");
+$mysqli = new mysqli("localhost", "root", "", "NYUSquare");
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
