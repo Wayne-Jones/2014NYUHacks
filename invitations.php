@@ -37,21 +37,24 @@
     function createList() {
       for(var i = 0; i < eventArray.length; i++){
         var Event = $("<li>")
-        .append($("<div class='row'>")
-        //.append($("<div class='col-md-12'>")
-        .append($("<h2>").html(eventArray[i][1]));
-        //.append($("div class='row'>")
-        //.append($("<div class='col-md-6'>")
-        //.append($("<h4>").html(eventArray[i][5] + ", " + eventArray[i][6]))
-        
-        console.log(Event);
-        //.append($("<p class='lead'>").html(eventArray[i][2]));
 
-        //var eventItem = $("<tr class='rowClickable' id='M" + i + "'>")
-        //.append($("<td>").html(eventArray[i][1]))
-        //.append($("<td>").html(eventArray[i][4] + " , " + eventArray[i][5]));
-        
+        .append($("<div class='row'>")
+          .append($("<div class='col-md-8'>")
+            .append($("<h2>").html(eventArray[i][1]))))
+        .append($("<div class='row'>")
+          .append($("<div class='col-md-5'>")
+            .append($("<h4>").html(eventArray[i][5] + ", " + eventArray[i][6])))
+          .append($("<div class='col-md-5'>")
+            .append($("<h4>").html(eventArray[i][3] + " at " + eventArray[i][4])))
+          .append($("<div class='col-md-2'>")
+            .append($("<button type='button' class='btn btn-primary'>View Event Page</button>"))))
+        .append($("<div class='row'>")
+          .append($("<div class='col-md-12'>")
+            .append($("<p class='lead'>").html(eventArray[i][2]))));
         $("ul.event-list").append(Event);
+      
+
+//<p class="lead">
       }
     }
   </script>
