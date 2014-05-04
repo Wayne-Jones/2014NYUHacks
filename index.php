@@ -27,6 +27,7 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script type="text/javascript">
+
       var rendererOptions = {
         draggable: true
       };
@@ -35,7 +36,11 @@
       var directionsService = new google.maps.DirectionsService();
       var map;
       //var eventArray = [Event Title, Date, Time, Location (Maybe Long/Lat)]; //To Call from Backend, AJAX?
-      var eventArray = [["Virgins Anonymous", "5/03/2014", "05:00PM", 40.729795,  -73.997748], ["Washington Square Pillow Fight", "4/10/2014", "12:30PM", 40.732137, -73.991954]];
+      var eventArray = [
+        [0,   "Virgins Anonymous",  "5/03/2014",  "05:00PM",  40.729795,  -73.997748], 
+        [1,   "Washington Square Pillow Fight", "4/10/2014",  "12:30PM",  40.732137,  -73.991954]
+      ];
+      
       function initialize() {
         geocoder = new google.maps.Geocoder();
         var nyu = new google.maps.LatLng(40.730869, -73.997218);
@@ -47,6 +52,14 @@
         addPublicEventMarkers();
       }
       
+      function createList() {
+          for (var i = 0; i < eventArray.length; i++) {
+              var row = $("<tr>").append($("<td>").html(eventArray[i][1]))
+                                 .append($("<td>").html(eventArray[i][4] + " , " + eventArray[i][5]));
+              $("tbody").append(row);
+          }
+      }
+
       function bindInfoWindow(marker, map, infowindow, strDescription) {
         google.maps.event.addListener(marker, 'click', function() {
           infowindow.setContent(strDescription);
@@ -56,10 +69,10 @@
       function addPublicEventMarkers() {
         for(var i=0;i<eventArray.length;i++){
           var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(eventArray[i][3], eventArray[i][4]),
+            position: new google.maps.LatLng(eventArray[i][4], eventArray[i][5]),
             map: map
           });
-          var contentString = '<div id="popupTitle">Event Title: '+eventArray[i][0]+'<div id="popupDate">Date of Event: '+eventArray[i][1]+'</div><br><div id="popupTime">Time of Event: '+eventArray[i][2]+'</div>';
+          var contentString = '<div id="popupTitle">Event Title: '+eventArray[i][1]+'<div id="popupDate">Date of Event: '+eventArray[i][2]+'</div><br><div id="popupTime">Time of Event: '+eventArray[i][3]+'</div>';
           var infowindow = new google.maps.InfoWindow({
             content: contentString
           });
@@ -67,6 +80,9 @@
         }
       }
       google.maps.event.addDomListener(window, 'load', initialize);
+      $(document).ready(function(){
+        createList();
+      });
     </script>
   </head>
   <body>
@@ -112,96 +128,12 @@
       <div class="col-xs-6 col-md-6">        
         <table class="table table-hover">
           <thead>
-
-
-
-
-
             <tr>
               <th>What?</th>
               <th>Where?</th>
             </tr>
           </thead>
           <tbody>
-
-
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-            <tr>
-              <td>Virgins Anonymous</td>
-              <td>NYU</td>
-            </tr>
-              
-
-
-
-
           </tbody>
         </table>
       </div>
