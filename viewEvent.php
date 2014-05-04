@@ -159,44 +159,47 @@
   </div>
     
       
-     <!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-          <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Event Title</h1>
-          <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""><p></p>
-          </pthis></div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Event Title</h1>
-          
+    <!-- Carousel
+    ================================================== -->
+    <form action="addEvent.php" method="POST">
+      <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="./images/lel.png" class="img-responsive">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Event Title</h1>
+                <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""></pthis>
+                <input type="file" name="img">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./images/image.jpg" class="img-responsive">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Event Title</h1>
+                <input type="file" name="img">
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./images/1500X500.gif" class="img-responsive">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Event Title</h1>
+                <input type="file" name="img">
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://placehold.it/1500X500" class="img-responsive">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Event Title</h1>
-          
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     <span class="icon-prev"></span>
