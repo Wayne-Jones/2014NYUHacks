@@ -117,3 +117,7 @@ tr:after{
 #myCarousel{
   margin-bottom: 15px;
 }
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}

@@ -171,17 +171,17 @@
         </ol>
         <div class="carousel-inner">
           <div class="item active">
-            <img src="./images/lel.png" class="img-responsive">
+            <img src="./images/image1.png" class="img-responsive">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Event Title</h1>
                 <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""></pthis>
-                <input type="file" name="img">
+                
               </div>
             </div>
           </div>
           <div class="item">
-            <img src="./images/image.jpg" class="img-responsive">
+            <img src="./images/image2.jpg" class="img-responsive">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Event Title</h1>
@@ -191,7 +191,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="./images/1500X500.gif" class="img-responsive">
+            <img src="./images/image3.jpg" class="img-responsive">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Event Title</h1>
