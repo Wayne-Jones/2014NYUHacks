@@ -118,7 +118,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a style="padding: 0px; margin: 0px;" class="navbar-brand" href="#"><img src="images/logo.png"></a>
+        <a style="padding: 0px; margin: 0px;" class="navbar-brand" href="index.php"><img src="images/logo.png"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

@@ -30,6 +30,7 @@
         var markerID = $(this).attr('id');
         centerMarker(markerID);
       });
+
     });
 
     var rendererOptions = {
@@ -42,9 +43,9 @@
     var map;
     //var eventArray = [Event Title, Date, Time, Location (Maybe Long/Lat)]; //To Call from Backend, AJAX?
     var eventArray = [
-    [0,   "Virgins Anonymous",  "5/03/2014",  "05:00PM",  40.729795,  -73.997748], 
-    [1,   "Washington Square Pillow Fight", "4/10/2014",  "12:30PM",  40.732137,  -73.991954],
-    [2,   "Martin Sosa Birthday Orgy", "10/02/2014",  "12:00AM",  40.73522,  -73.99806]
+    [0,   "Washington Square Pillow Fight",  "5/03/2014",  "05:00PM",  40.729795,  -73.997748], 
+    [1,   "No Pants NYC", "4/10/2014",  "12:30PM",  40.732137,  -73.991954],
+    [2,   "NY Hacks", "10/02/2014",  "12:00PM",  40.73522,  -73.99806]
     ];
 
     function initialize() {
@@ -115,7 +116,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a style="padding: 0px; margin: 0px;" class="navbar-brand" href="#"><img src="images/logo.png"></a>
+        <a style="padding: 0px; margin: 0px;" class="navbar-brand" href="index.php"><img src="images/logo.png"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -171,7 +172,7 @@
             <th>Where?</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="events">
         </tbody>
       </table>
     </div>
