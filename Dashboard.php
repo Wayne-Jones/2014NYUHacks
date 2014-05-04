@@ -76,6 +76,24 @@
                 <input type="submit" value="search" class="tfbutton">
             </form>
             <div class="tfclear"></div>
+      </div> 
+      <div class="row">
+          <div class="col-xs-6 col-sm-3">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div>
+                    <p>Insert Map Here</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">Event Name</div>
+
+          <!-- Add the extra clearfix for only the required viewport -->
+          <div class="clearfix visible-xs"></div>
+
+          <div class="col-xs-6 col-sm-3">Physical location</div>
+          <div class="col-xs-6 col-sm-3">Contact information</div>
       </div>
       <div class="row">
           <div class="col-xs-6 col-sm-3">
@@ -87,15 +105,14 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">Event Name</div>
 
           <!-- Add the extra clearfix for only the required viewport -->
           <div class="clearfix visible-xs"></div>
 
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">Physical location</div>
+          <div class="col-xs-6 col-sm-3">Contact information</div>
       </div>
-      <br></br>
       <div class="row">
           <div class="col-xs-6 col-sm-3">
             <div class="panel panel-default">
@@ -106,32 +123,13 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">Event Name</div>
 
           <!-- Add the extra clearfix for only the required viewport -->
           <div class="clearfix visible-xs"></div>
 
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-      </div>
-      <br></br>
-      <div class="row">
-          <div class="col-xs-6 col-sm-3">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                  <div>
-                    <p>Insert Map Here</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-
-          <!-- Add the extra clearfix for only the required viewport -->
-          <div class="clearfix visible-xs"></div>
-
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-          <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+          <div class="col-xs-6 col-sm-3">Physical location</div>
+          <div class="col-xs-6 col-sm-3">Contact information</div>
       </div>
     </div>
   </body>
