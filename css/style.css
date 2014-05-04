@@ -2,22 +2,47 @@ body {
     background-image: url(../images/background.png); background-repeat: repeat;
 }
 
-.Flexible-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+.table{
+    margin-bottom: 0px;
 }
 
-.Flexible-container iframe,   
-.Flexible-container object,  
-.Flexible-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
+table {
+    border-collapse: collapse;
     width: 100%;
-    height: 100%;
+    font-size: 24px;
+}
+thead {
+    text-align:left;
+    display: table;
+    float: left;
+    width: 100%;
+}
+thead tr {
+    display: table-row;
+    width: 100%;
+    height: 38px;
+}
+tbody {
+    display: block;
+    overflow: auto;
+    float: left;
+    width: 100%;
+    height: 462px;
+}
+
+tbody tr {
+    display: table;
+    width: 100%;
+}
+
+.table>thead>tr>th{
+  padding: 0;
+}
+
+tr:after{   /* IE8 fix */
+    content: ".";
+    margin-left: -3px; /* to hide the content above tr */ /* not necessary if you are ok with 1px gap */
+    visibility: hidden;
 }
 
 #pageWrap{
@@ -71,7 +96,7 @@ body {
   clear:both;
 }
 #map-canvas{
-  min-height:500px;
+  height:500px;
   width:100%;
   -webkit-background-size:100%;
   -moz-background-size:100%;

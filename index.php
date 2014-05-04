@@ -35,7 +35,7 @@
       var directionsService = new google.maps.DirectionsService();
       var map;
       //var eventArray = [Event Title, Date, Time, Location (Maybe Long/Lat)]; //To Call from Backend, AJAX?
-      var eventArray = [["Party at Dawid's House", "5/03/2014", "05:00PM", 40.729795,  -73.997748], ["Washington Square Pillow Fight", "4/10/2014", "12:30PM", 40.732137, -73.991954]];
+      var eventArray = [["Virgins Anonymous", "5/03/2014", "05:00PM", 40.729795,  -73.997748], ["Washington Square Pillow Fight", "4/10/2014", "12:30PM", 40.732137, -73.991954]];
       function initialize() {
         geocoder = new google.maps.Geocoder();
         var nyu = new google.maps.LatLng(40.730869, -73.997218);
@@ -105,12 +105,105 @@
       <strong>Warning!</strong> Better check yourself, you're not looking too good.
     </div>
 
-    <div class="row">
+    <div class="row" style="border-bottom: 2px groove; border-top: 2px groove;">
       <div class="col-xs-6 col-md-6">
         <div id="map-canvas"/></div>
       </div>
       <div class="col-xs-6 col-md-6">        
+        <table class="table table-hover">
+          <thead>
 
+
+
+
+
+            <tr>
+              <th>What?</th>
+              <th>Where?</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+            <tr>
+              <td>Virgins Anonymous</td>
+              <td>NYU</td>
+            </tr>
+              
+
+
+
+
+          </tbody>
+        </table>
       </div>
     </div>  
 
