@@ -39,6 +39,9 @@
         // which is #myCarousel
         $('#myCarousel').carousel();
         $('#datepicker').datepicker();
+        $('#datepicker').change(function(){
+          $('#datepicker').datepicker( "option", "dateFormat", "yy-mm-dd");
+        });
       });
     </script>    
   </head>
@@ -108,8 +111,8 @@
                       <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Event Title & Location</a>
                       <div class="collapse" id="demo4">
                         <div class="list-group-item">
-                          <input type="text" class="form-control" id="eventTitle" placeholder="Event Title" required>
-                          <input type="text" class="form-control" id="location" placeholder="Enter Full Location" required>
+                          <input type="text" class="form-control" name="eventTitle" id="eventTitle" placeholder="Event Title" required>
+                          <input type="text" class="form-control" name="location" id="location" placeholder="Enter Full Location" required>
                         </div>
                       </div>
                     </div>
@@ -124,8 +127,8 @@
                       <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date & Time</a>
                       <div class="collapse" id="demo1">
                         <div class="list-group-item">
-                          <input class="form-control" type="text" id="datepicker" placeholder="Date" required>
-                          <input class="form-control" type="text" id="time" placeholder="Time" required>
+                          <input class="form-control" type="text" name="datepicker" id="datepicker" placeholder="Date" required>
+                          <input class="form-control" type="text" name="time" id="time" placeholder="Time" required>
                         </div>
                       </div>
                     
@@ -140,7 +143,7 @@
           <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
           <div class="collapse" id="demo2">
             <div class="list-group-item">
-              <input type="text" class="form-control" id="description" placeholder="Description" required>                          
+              <input type="text" class="form-control" name="description" id="description" placeholder="Description" required>                          
             </div>
           </div>
         </div>
