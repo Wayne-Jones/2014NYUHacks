@@ -104,7 +104,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="item active">
-            <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
+            <img src="images/lel.png" class="img-responsive">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Event Title</h1>
