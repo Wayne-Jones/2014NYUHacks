@@ -115,9 +115,9 @@
       <!-- end carousel -->
 
 
-      <div class="container" id="a-content">
-        <div class="row target" id="a-row">
-          <div class="col-md-6 col-sm-5" id="a-left">
+        <div class="container" id="a-content">
+          <div class="row target" id="a-row">
+            <div class="col-md-6 col-sm-5" id="a-left">
             
             <!-- SideBar/GuestList -->
             <div class="container" id="a-content">
@@ -125,10 +125,6 @@
                 <div class="col-md-6 col-sm-5" id="a-left">
                   <div id="MainMenu">
                     <div class="list-group panel">
-                      <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Guest List</a>
-                      <div class="collapse" id="demo3">
-                        <a href="" class="list-group-item"> Insert List of People Here.</a>
-                      </div>
                       <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Location</a>
                       <div class="collapse" id="demo4">
                         <div class="list-group-item">
@@ -151,12 +147,6 @@
                           <input class="form-control" type="text" id="time" placeholder="Time">
                         </div>
                       </div>
-                      <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
-                      <div class="collapse" id="demo2">
-                        <div class="list-group-item">
-                          <input type="text" class="form-control" id="description" placeholder="Description">                          
-                        </div>
-                      </div>
                     
                     </div>
                   </div>
@@ -165,6 +155,13 @@
             </div>
           </div>
         </div>
+        <div class="col-md-12 col-sm-12" id="a-right" style="margin-left: 15px; margin-bottom: 10px;">
+        <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
+                  <div class="collapse" id="demo2">
+                    <div class="list-group-item">
+                          <input type="text" class="form-control" id="description" placeholder="Description">                          
+                        </div>
+                      </div>
       </div>
     <!-- /Date/Time/Description -->
      
@@ -181,12 +178,9 @@
     </div>
     <!-- /Accept/Decline -->
 
-    
-    <div class="panel panel-default">
       <div class="panel-body">
         <input type="submit" class="form-control">
       </div>
-    </div>
   </form>
   </body>
 </html>

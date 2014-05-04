@@ -113,3 +113,7 @@ tr:after{
 .carousel-caption{
   z-index: 0;
 }
+
+#myCarousel{
+  margin-bottom: 15px;
+}
