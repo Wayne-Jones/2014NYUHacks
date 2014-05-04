@@ -94,56 +94,7 @@
   </div>
     <!-- Carousel
     ================================================== -->
-    <form action="addEvent.php" method="POST">
-      <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Event Title</h1>
-                <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""></pthis>
-                <input type="file" name="img">
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="http://lorempixel.com/1500/600/abstract/1" class="img-responsive">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Event Title</h1>
-                <input type="file" name="img">
-              </p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="http://placehold.it/1500X500" class="img-responsive">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Event Title</h1>
-                <input type="file" name="img">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="icon-next"></span>
-        </a>  
-      </div>
-      <!-- end carousel -->
-
-
+    <form action="addEvent.php" method="POST" enctype="multipart/form-data">
         <div class="container" id="a-content">
           <div class="row target" id="a-row">
             <div class="col-md-6 col-sm-5" id="a-left">
@@ -154,10 +105,11 @@
                 <div class="col-md-6 col-sm-5" id="a-left">
                   <div id="MainMenu">
                     <div class="list-group panel">
-                      <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Location</a>
+                      <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Event Title & Location</a>
                       <div class="collapse" id="demo4">
                         <div class="list-group-item">
-                          <input type="text" class="form-control" id="location" placeholder="Enter Full Location">
+                          <input type="text" class="form-control" id="eventTitle" placeholder="Event Title" required>
+                          <input type="text" class="form-control" id="location" placeholder="Enter Full Location" required>
                         </div>
                       </div>
                     </div>
@@ -169,11 +121,11 @@
                 <div class="col-md-6 col-sm-7" id="a-right">
                   <div id="MainMenu">
                     <div class="list-group panel">
-                      <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date and Time</a>
+                      <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date & Time</a>
                       <div class="collapse" id="demo1">
                         <div class="list-group-item">
-                          <input class="form-control" type="text" id="datepicker" placeholder="Date">
-                          <input class="form-control" type="text" id="time" placeholder="Time">
+                          <input class="form-control" type="text" id="datepicker" placeholder="Date" required>
+                          <input class="form-control" type="text" id="time" placeholder="Time" required>
                         </div>
                       </div>
                     
@@ -185,13 +137,21 @@
           </div>
         </div>
         <div class="col-md-12 col-sm-12" id="a-right" style="margin-left: 15px; margin-bottom: 10px;">
-        <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
-                  <div class="collapse" id="demo2">
-                    <div class="list-group-item">
-                          <input type="text" class="form-control" id="description" placeholder="Description">                          
-                        </div>
-                      </div>
-      </div>
+          <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
+          <div class="collapse" id="demo2">
+            <div class="list-group-item">
+              <input type="text" class="form-control" id="description" placeholder="Description" required>                          
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12" id="a-right" style="margin-left: 15px; margin-bottom: 10px;">
+          <a href="#demo5" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">File Upload</a>
+          <div class="collapse" id="demo5">
+            <div class="list-group-item">
+              <input type="file" class="span4" id="file" name="file">                       
+            </div>
+          </div>
+        </div>
     <!-- /Date/Time/Description -->
      
         <!-- Accept/Decline
