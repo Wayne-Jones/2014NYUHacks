@@ -19,8 +19,88 @@
             // which is #myCarousel
             $('#myCarousel').carousel();
         });
+      </script>
+      <!-- Load the Google Maps API  -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-</script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      createTable();
+      $('tr.rowClickable').bind('click', function() { 
+        var markerID = $(this).attr('id');
+        centerMarker(markerID);
+      });
+    });
+
+    var rendererOptions = {
+      draggable: true
+    };
+    var geocoder;
+    var markerHash = {};
+    var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
+    var directionsService = new google.maps.DirectionsService();
+    var map;
+    //var eventArray = [Event Title, Date, Time, Location (Maybe Long/Lat)]; //To Call from Backend, AJAX?
+    var eventArray = [
+    [0,   "Virgins Anonymous",  "5/03/2014",  "05:00PM",  40.729795,  -73.997748]
+    ];
+
+    function initialize() {
+      geocoder = new google.maps.Geocoder();
+      var nyu = new google.maps.LatLng(40.730869, -73.997218);
+      var mapOptions = {
+        zoom:15,
+        center: nyu
+      }
+      map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      addEvents();
+    }
+    
+    function createTable() {
+      for(var i = 0; i < eventArray.length; i++){
+        var eventRow = $("<tr class='rowClickable' id='M" + i + "'>")
+        .append($("<td>").html(eventArray[i][1]))
+        .append($("<td>").html(eventArray[i][4] + " , " + eventArray[i][5]));
+        
+        $("tbody").append(eventRow);
+      }
+    }
+
+    function addEvents() {
+      for(var i = 0; i < eventArray.length; i++){
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(eventArray[i][4], eventArray[i][5]),
+          map: map
+        });
+
+        var contentString = '<div id="popupTitle">Event Title: '+eventArray[i][1]+'<div id="popupDate">Date of Event: '+eventArray[i][2]+'</div><br><div id="popupTime">Time of Event: '+eventArray[i][3]+'</div>';
+        
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        markerHash['M' + i] = marker;
+        
+        bindInfoWindow(marker, map, infowindow, contentString);
+      }
+    }
+
+    function bindInfoWindow(marker, map, infowindow, strDescription) {
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(strDescription);
+        infowindow.open(map, marker);
+      });
+    }
+
+    function centerMarker(id) {
+      console.log("I've been called");
+      map.panTo(markerHash[id].getPosition());
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+
+  </script>
     <!--<link href="css/carousel.css" rel="stylesheet">-->
   </head>
   <body>
@@ -175,7 +255,10 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div>
-        <p>Insert Map Here</p>
+        <div class="row" style="border-bottom: 2px groove; border-top: 2px groove;">
+    <div class="col-md-12 col-sm-12">
+      <div id="map-canvas"/></div>
+    </div>
         </div>
       </div>
     </div>
