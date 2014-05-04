@@ -39,6 +39,7 @@
     </script>    
   </head>
   <body>
+      <form method="post">
     
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -78,8 +79,7 @@
             <div class="carousel-caption">
               <h1>Event Title</h1>
               <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""><p></p>
-              <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Add a Picture!</a>
-            </p></pthis></div>
+              <input type="file" name="img"></pthis></div>
           </div>
         </div>
         <div class="item">
@@ -87,7 +87,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Event Title</h1>
-              <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Add a Picture!</a>
+              <input type="file" name="img">
             </p>
             </div>
           </div>
@@ -97,11 +97,11 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Event Title</h1>
-              <p><p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Add a Picture!</a>
-            </p></p>
+              <input type="file" name="img">
             </div>
           </div>
         </div>
+    </form>
       </div>
       <!-- Controls -->
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -125,9 +125,22 @@
                     <div class="collapse" id="demo3">
                       <a href="" class="list-group-item"> Insert List of People Here.</a>
                     </div>
-                  </div>
-                </div>
+                  
+                
+               <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Location</a>
+                    <div class="collapse" id="demo4">
+                      <div class="form-group">
+                        <div class="list-group-item">
+                          <!--</1><label for="name">Insert Description Here                 </label>!-->
+                          <input type="text" class="form-control" id="name" placeholder="Location">
+                          
+                        </div>
+                      </div>
+                    </div>
               </div>
+            </div>
+            </div>
+            
               <!-- /Sidebar/GuestList -->
               <!-- Date/Time/Description -->
               <div class="col-md-6 col-sm-7" id="a-right">
@@ -136,25 +149,27 @@
                     <a href="#demo1" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Date and Time</a>
                     <div class="collapse" id="demo1">
                       <div class="list-group-item">
-                        <p>Date: <input type="text" id="datepicker">            </p>
-                        <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Submit</button>
+                        <p> <input class = "form-control" type="text" id="datepicker">
+                        </p>
+                        </div>
                       </div>
-                    </div>
+                    
                     <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Description</a>
                     <div class="collapse" id="demo2">
                       <div class="form-group">
                         <div class="list-group-item">
                           <!--</1><label for="name">Insert Description Here                 </label>!-->
-                          <input type="text" class="form-control" id="name" placeholder="Description">
-                          <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Submit</button>
+                          <p><input type="text" class="form-control" id="name" placeholder="Description"></p>
+                          
                         </div>
                       </div>
                     </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
-          </div>
+          
+            </div>
         </div>
       </div>
     </div>
@@ -173,13 +188,12 @@
     </div>
     <!-- /Accept/Decline -->
 
-    <!-- Map of Event -->
+    
     <div class="panel panel-default">
       <div class="panel-body">
         <div>
           <input type="text" class="form-control" id="name" placeholder="Location">
           <button class="btn btn-xlarge" class="btn btn-default navbar-btn">Submit</button>
-          <p>Insert Map Here</p>
         </div>
       </div>
     </div>
