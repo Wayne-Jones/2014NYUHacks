@@ -15,8 +15,9 @@ session_start();
       $stmt->execute();
       $stmt->bind_result($user, $fName);
       if($stmt->fetch()){
+
         if($user){
-          echo $user;
+	
           $_SESSION["user"]=$user;
           $_SESSION["fName"]=$fName;
           $_SESSION["REMOTE_ADDR"] = $_SERVER["REMOTE_ADDR"];

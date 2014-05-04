@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 04, 2014 at 04:05 AM
+-- Generation Time: May 04, 2014 at 03:15 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -44,36 +44,12 @@ CREATE TABLE IF NOT EXISTS `events` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Truncate table before insert `events`
---
-
-TRUNCATE TABLE `events`;
---
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`eID`, `eventName`, `eventTime`, `eventDate`, `eventLocation`, `eventLong`, `eventLat`, `eventDescription`, `privacyIndicator`, `pictureURL`) VALUES
 (1, 'String Chamber Music', '19:30:00', '2014-05-03', 'Black Box Theatre', '', '', 'Performances from the chamber music program.\r\nADMISSION: Free', 0, '');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `hostof`
---
-
-DROP TABLE IF EXISTS `hostof`;
-CREATE TABLE IF NOT EXISTS `hostof` (
-  `uID` int(11) NOT NULL,
-  `eID` int(11) NOT NULL,
-  PRIMARY KEY (`eID`,`uID`),
-  KEY `uID` (`uID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Truncate table before insert `hostof`
---
-
-TRUNCATE TABLE `hostof`;
 -- --------------------------------------------------------
 
 --
@@ -91,11 +67,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
--- Truncate table before insert `users`
---
-
-TRUNCATE TABLE `users`;
---
 -- Dumping data for table `users`
 --
 
@@ -104,17 +75,6 @@ INSERT INTO `users` (`uID`, `email`, `pass`, `firstName`, `lastName`) VALUES
 (2, 'user2@aol.com', 'b4af804009cb036a4ccdc33431ef9ac9', 'Wayne', 'Jones'),
 (3, 'user3@aol.com', 'b4af804009cb036a4ccdc33431ef9ac9', 'Martin', 'Sosa'),
 (4, 'user4@aol.com', 'b4af804009cb036a4ccdc33431ef9ac9', 'Gene', 'Lee');
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `hostof`
---
-ALTER TABLE `hostof`
-  ADD CONSTRAINT `hostof_ibfk_2` FOREIGN KEY (`eID`) REFERENCES `events` (`eID`),
-  ADD CONSTRAINT `hostof_ibfk_1` FOREIGN KEY (`uID`) REFERENCES `users` (`uID`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
