@@ -110,3 +110,6 @@ tr:after{
   -o-background-size:cover;
   background-size:cover
 }
+.carousel-caption{
+  z-index: 0;
+}
