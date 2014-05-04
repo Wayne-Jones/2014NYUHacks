@@ -145,7 +145,7 @@
                       <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Location</a>
                       <div class="collapse" id="demo4">
                         <div class="list-group-item">
-                          <input type="text" class="form-control" id="location" placeholder="Location">
+                          <input type="text" class="form-control" id="location" placeholder="Enter Full Location">
                         </div>
                       </div>
                     </div>
