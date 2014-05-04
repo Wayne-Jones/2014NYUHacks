@@ -128,7 +128,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome '.$_SESSION['fName'].'<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Create Event</a></li>
+                <li><a href="createEvent.php">Create Event</a></li>
                 <li><a href="#">Manage Events</a></li>
                 <li><a href="invitations.php">My Invitations</a></li>
               </ul>

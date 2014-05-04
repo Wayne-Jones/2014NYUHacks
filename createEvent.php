@@ -56,26 +56,34 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav pull-right">
           <!-- THIS IS FOR THE ALREADY LOGGED IN USER -->
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome Wayne!<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Create Event</a></li>
-              <li><a href="#">Manage Events</a></li>
-              <li><a href="#">My Invitations</a></li>
-            </ul>
-          </li>
-          <!-- THIS IS THE FORM USED TO LOG IN -->
-          <li>
-            <form class="navbar-form" role="search" action="login.php">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-default">Sign in</button>
-            </form>
-          </li>
+          <?php
+          if(isset($_SESSION['user'])){
+            echo '
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome '.$_SESSION['fName'].'<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="createEvent.php">Create Event</a></li>
+                <li><a href="#">Manage Events</a></li>
+                <li><a href="invitations.php">My Invitations</a></li>
+              </ul>
+            </li>
+            <li><button type="submit" id="signOut" class="btn btn-default" style="margin-top: 10px;"><a href="logout.php">Log Out</a></button></li>';
+          }
+          else{
+            echo '
+            <li>
+              <form class="navbar-form" action="login.php" method="POST">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-default">Sign in</button>
+              </form>
+            </li>';
+          }
+          ?>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
