@@ -1,64 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NYU Square</title>
+<?php
+require 'db.php';
+session_start();
+//if the user is already logged in, redirect them back to homepage
+  if(isset($_SESSION["user"])) {
+    header("Location: ../index.html");
+    exit();
+  }
+  else {
+    //if the user have entered both entries in the form, check if they exist in the database
+    if((isset($_POST["email"]) && isset($_POST["password"]) && $_POST["email"]!=NULL && $_POST["password"]!=NULL)) {
+      //check if entry exists in database
+      $stmt=$mysqli->prepare("Select email from users where email= ? and password= ?");
+        $password = md5($_POST["password"]);
+        $email = $_POST["email"];
+        $stmt->bind_param("ss", $email, $password);
+        if($stmt->execute()){
+          $stmt->bind_result($user);
+          $stmt->fetch();
+          if($user){
+            $_SESSION["user"]=$user;
+            $_SESSION["REMOTE_ADDR"] = $_SERVER["REMOTE_ADDR"];
+            $stmt->close();
+            $mysqli->close();
+            header("Location: ../index.html");
+            exit();
+          }
+          else{
+            //Username or password is incorrect
+            $error = "Your username or password is incorrect. Please try again";
+            $_SESSION["loginError"]=$error;
+            $stmt->close();
+            $mysqli->close();
+            header("Location: ../index.html");
+            exit();
+          }
+        }
+        else{
+          //There is a connection issue with the database
+          $stmt->close();
+          $mysqli->close();
+          header("Location: ../index.html");
+          exit();
+        }
 
-    <!-- Bootstrap / CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+      }
+    else{
+      //The input values was not set
+      header("Location: ../index.html");
+      exit();
+    }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <!-- JavaScript Files -->
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-  </head>
-  <body>
-    <div class="container">
-    <form class="form-horizontal" role="form">
-      <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Sign in</button>
-        </div>
-      </div>
-    </form>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  </body>
-</html>
+  }
+?>
