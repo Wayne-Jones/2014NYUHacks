@@ -27,6 +27,13 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script type="text/javascript">
+      $(document).ready(function(){
+        createList();
+        $('tr.rowClickable').bind('click', function() { 
+              var markerID = $(this).attr('id');
+              centerMarker(markerID);
+        });
+      });
 
       var rendererOptions = {
         draggable: true
@@ -52,12 +59,25 @@
         addPublicEventMarkers();
       }
       
+
+
       function createList() {
           for (var i = 0; i < eventArray.length; i++) {
-              var row = $("<tr>").append($("<td>").html(eventArray[i][1]))
-                                 .append($("<td>").html(eventArray[i][4] + " , " + eventArray[i][5]));
+              var row = $("<tr class='rowClickable' id=" + i + ">").append($("<td>").html
+                (
+                  eventArray[i][1])
+                ).append($("<td>").html(eventArray[i][4] + " , " + eventArray[i][5]));
               $("tbody").append(row);
           }
+      }
+
+      function centerMarker(id) {
+        console.log("I've been called");
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(eventArray[id][4], eventArray[id][5]),
+            map: map
+          });
+        map.panTo(marker.getPosition());
       }
 
       function bindInfoWindow(marker, map, infowindow, strDescription) {
@@ -80,9 +100,8 @@
         }
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-      $(document).ready(function(){
-        createList();
-      });
+      
+
     </script>
   </head>
   <body>
